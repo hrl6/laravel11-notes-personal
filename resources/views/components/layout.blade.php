@@ -10,7 +10,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-gummy antialiased dark:bg-black dark:text-white/50 m-10 flex justify-center">
+<body class="font-gummy antialiased m-10 flex justify-center">
     <div class="flex flex-col">
         @session('message')
             <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative flex items-center gap-2 mb-6"

@@ -1,5 +1,5 @@
-<x-layout>
-    <div class="flex-1 sm:flex-none sm:min-w-[500px]">
+<x-app-layout>
+    <div class="flex-1 sm:flex-none sm:w-[500px] py-6">
         <h1 class="text-2xl font-semibold text-gray-800 mb-6">Edit Note</h1>
 
         <form action="{{ route('note.update', $note) }}" method="POST" class="space-y-4">
@@ -19,16 +19,16 @@
             <div class="flex items-center justify-between">
                 <a
                     href="{{ route('note.index') }}"
-                    class="btn__shadow-2 px-4 py-2 bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200 rounded-[16px] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                    class="btn__shadow-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-[16px] hover:bg-gray-300 transition-colors">
                     Cancel
                 </a>
                 <button
                     type="submit"
-                    class="btn__shadow-2 px-4 py-2 bg-tertiary text-textlight dark:bg-gray-700 dark:text-gray-200 rounded-[16px] hover:bg-opacity-90 dark:hover:bg-gray-600 transition-colors"
+                    class="btn__shadow-2 px-4 py-2 bg-tertiary text-textlight rounded-[16px] hover:bg-opacity-90 transition-colors"
                 >
                     Submit
                 </button>
             </div>
         </form>
     </div>
-</x-layout>
+</x-app-layout>

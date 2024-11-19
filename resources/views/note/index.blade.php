@@ -1,5 +1,5 @@
-<x-layout>
-    <div class="w-full max-w-4xl mx-auto">
+<x-app-layout>
+    <div class="w-full max-w-4xl mx-auto py-6">
         <div class="flex flex-col gap-6">
             <!-- New Note Button -->
             <div class="flex justify-end">
@@ -12,8 +12,8 @@
             <!-- Notes Grid -->
             <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach ($notes as $note)
-                    <div class="bg-boxlight dark:bg-gray-800 rounded-[32px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-6 flex flex-col">
-                        <div class="prose dark:prose-invert max-w-none mb-4 flex-1">
+                    <div class="bg-boxlight rounded-[32px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] p-6 flex flex-col">
+                        <div class="prose max-w-none mb-4 flex-1">
                             {{ Str::words($note->note, 30) }}
                         </div>
                         
@@ -23,7 +23,7 @@
                                 View
                             </a>
                             <a href="{{ route('note.edit', $note) }}" 
-                               class="btn__shadow-2 px-4 py-2 bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200 rounded-[16px] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                               class="btn__shadow-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-[16px] hover:bg-gray-300 transition-colors">
                                 Edit
                             </a>
                             <form action="{{ route('note.destroy', $note) }}" method="POST">
@@ -41,4 +41,4 @@
             {{ $notes->links() }}
         </div>
     </div>
-</x-layout>
+</x-app-layout>

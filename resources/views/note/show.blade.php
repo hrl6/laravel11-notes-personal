@@ -1,5 +1,5 @@
-<x-layout>
-    <div class="flex-1 sm:flex-none sm:max-w-[500px]">
+<x-app-layout>
+    <div class="flex-1 sm:flex-none w-[500px] py-6">
         <div class="flex items-center gap-4 mb-6">
             <a href="{{ route('note.index') }}" class="hover:text-gray-600 transition-colors">
                 <x-icons.arrow-left />
@@ -11,7 +11,7 @@
         <div class="flex items-center gap-4 pb-4">
             <a
                 href="{{ route('note.edit', $note) }}"
-                class="btn__shadow-2 px-4 py-2 bg-gray-200 text-gray-700 dark:bg-gray-700 dark:text-gray-200 rounded-[16px] hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                class="btn__shadow-2 px-4 py-2 bg-gray-200 text-gray-700 rounded-[16px] hover:bg-gray-300 transition-colors">
                 Edit
             </a>
             <form action=" {{ route('note.destroy', $note)}}" method="POST">
@@ -27,4 +27,4 @@
             <p>{{ $note->note }}</p>
         </div>
     </div>
-</x-layout>
+</x-app-layout>
