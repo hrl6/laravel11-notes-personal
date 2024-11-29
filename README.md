@@ -13,7 +13,6 @@ This project was created as part of my journey to learn and practice full-stack 
 - **Delete Notes**: Remove notes you no longer need.
 
 ## Screenshots  
-(Include screenshots of the app here to showcase its functionality. For example:)   
 - **Notes List**  
 ![Notes List](./resources/img/homepage-loggedin.png)
 ![Only Show 15 Notes](./resources//img/show-15-only.png)
